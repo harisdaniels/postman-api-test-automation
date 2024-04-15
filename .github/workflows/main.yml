@@ -2,6 +2,14 @@ name: Postman API Test Automation using Github Actions
 
 on: 
   workflow_dispatch:
+    inputs:
+        platform:
+          description: 'select where to run'
+          required: true
+          default: 'github'
+          type: choice
+          options:
+          - github
   
   push:
     branches:
